@@ -1274,13 +1274,17 @@
 						- Ils peuvent allouer chaque enfant (naturel) sur un des deux foyers fiscaux
 						- Il existe une allocation optimale qui permet de minimiser l'impôt
 					</section>
+
+					<section>
+						Les couples de concubins avec enfant(s) (2 enfants)
+						<iframe class="stretch" src="./docs/cohabitants-heatmap.html">
+                  		</iframe>
+					</section>
 					<section data-markdown  style =  "text-align: center;font-size: 75%">
 						25% des ménages n'optimisent pas.
 					</section>
-					<section>
-						Les couples de concubins avec enfant(s)
-						<iframe class="stretch" src="./docs/cohabitants-heatmap.html">
-                  		</iframe>
+					<section >
+						<img class="stretch" style="width: 70%;" data-src="./docs/MLN_cohabitants.png">
 					</section>
 					<section>
 						Abaissement du plafond du quotient familial
@@ -1301,98 +1305,118 @@
 
 				<section>
 					<section>
-						Qu'en retenir ? 
+						Compétences techniques
 					</section>
 					<section data-markdown  style =  "text-align: left;font-size: 75%">
 						- Technicité en informatique dans le traitement de données complexes.
-						- Capacités de modélisation théorique ou statistique.
-						- Sait travailler en équipe (git, test unitaires, intégration continue)
-						- Des connaissances juridiques.
-					</section>
-					<section>
-					<div class="container" style="height:500px;width:900px;border:3px solid #ccc;font:20px/26px Georgia, Garamond, Serif;overflow:auto;">
-						<div class="row">
-						<div class="col-xl-8 col-md-7 col-sm-7 col-xs-12"> <!-- change to 7 if not for print -->
-							<div class="col-xs-6 col-xs-6">
-								<img src="https://img.icons8.com/color/48/000000/python.png"/><strong>Python:</strong>
-								<ul>
-								<li>
-									<img src="https://img.icons8.com/ios/26/000000/sine.png"/>   <strong>Statistics:</strong><br> Pandas***,  Statsmodels**, Scikit-Learn*, causeinfer, DoWhy
-								</li>
-								<li>
-									<img src="https://img.icons8.com/color/26/000000/thumb-up--v1.png"/>  <strong>Best practices:</strong><br> PEP8** (Pylint, Black), Virtual environnements (Poetry**, pyenv, Conda**, pew**), Unit test: (pytest**, unittest), Continuous Integration (Travis**, CircleCI*)
-								</li>
-								<li>
-									<img src="https://img.icons8.com/color/48/000000/graph.png"width="26" height="26"/> 
-									<strong>Plotting:</strong><br> Matplotlib***, seaborn**, bokeh**, plotly**, altair
-								</li>
-								<!-- <li>
-									<img src="https://jupyter.org/favicon.ico" width="26" height="26""/> Jupyter: 
-								</li> -->
-								<li>
-									<img src="https://img.icons8.com/ultraviolet/48/000000/domain.png" width="26" height="26"/> <strong>Web Scrapping/API:</strong><br> Beautiful Soup*, Scrappy, API (Google Places, Twitter, JC-Decaux, meteostat)
-								</li>
-								<li>
-									<img src="https://img.icons8.com/color/48/000000/network-drive.png" width="26" height="26"/> <strong>Big Data:</strong><br> Dask*, Vaex*, pandarallel**, Spark, feather
-								</li>
-								</ul>
-							</div>
-							<div class="col-xs-6 col-xs-6">
-								<img src="https://img.icons8.com/color/48/000000/module.png"/> <stron>Workflow:</stron>
-								<ul>
-								<li><strong>Version Control:</strong><br> git**, github***, gitlab*, jupytext, dvc</li>
-								<li><strong>Data querying:</strong><br> SQL*, </li>
-								<li><strong>IDE:</strong><br> Jupyterlab***, PyCharm**, VsCode*, Spyder</li>
-								<li><strong>OS:</strong><br> Linux (Debian**), MacOS**, Windows</li>
-								<li><strong>Cloud/Virtualization:</strong><br> Scaleway**, AWS*, Docker*, ssh*</li>
-								</ul>
-								<img src="https://img.icons8.com/color/48/000000/reading.png" width="26" height="26" /> Interest in/want to learn:
-								<ul>
-								<li>Tensorflow, Keras, MLflow, rapids, Kubernetes/Kubeflow, Airflow, Pytorch </li>
-								</ul>
-							</div>
-							<ul><li><strong>Other:</strong> Bash*, Latex**, Reveal.js**, HTML5*, R*, Excel/VBA, SAS</li></ul>
-							</div>
-							
-						</div>
+						- Capacité à aller chercher des données sous diverses formes (API, web-scrapping, jeux de données sous divers formats)
+						- Grande maitrise de l'écosystème Python
+						- Expérience dans la production de pipeline de données via le CASD
+						- Maitrise des outils et process modernes en informatique (git, test unitaires, intégration continue)
+						- Grand intérêt pour la data science (outils, ML prédictis, inférence causale)
 					</section>
 				</section>
 				<section>
 					<section>
-						<h3>Projet professionnel : Data scientist</h3>
-						
-						<h4>(et possibilités de projets pour INED)</h4>
+						Pratiques
 					</section>
 					<section>
-						Data Scientist ? <br>
+						Échantillon Démographique Permanent
+					</section>
+				<section>
+						<h4>Pratiques I:</h4>
+						<pre class="fragment" data-id="code-animation"><code class="Python" data-trim data-line-numbers>
+						%%time
+						import pandas as pd
+						df_indiv = pd.read_csv(data_path + "FISC_INDIVIDU_2013.csv")
+						</code></pre>
+						<pre class="fragment" data-id="code-animation"><code class="console" data-trim data-line-numbers>
+							Wall time: 2min 12s
+						</code></pre>
+						
+						<pre class="fragment" data-id="code-animation"><code class="Python" data-trim data-line-numbers>
+						%%time
+						import pandas as pd
+						df_indiv = pd.read_csv(data_path + 
+							"FISC_INDIVIDU_2013.feather")
+						</code></pre>
+						<pre class="fragment" data-id="code-animation"><code class="console" data-trim data-line-numbers>
+							Wall time: 2.36s
+						</code></pre>
+				</section>
+				<section><iframe class="stretch" data-src="https://nbviewer.jupyter.org/github/adrienpacifico/Thesis_Taxation_2019/blob/master/Code/Chapter_2/Data_analysis/1-Start.ipynb" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe></section>
+				<section>
+				<h4>Pratiques 2:</h4>
+						<pre class="fragment" data-id="code-animation"><code class="Python; stretch"  data-trim data-line-numbers>
+						from select_observations import select_individuals
+						from geographical_units import populate_df_with_geo_info as gu
+						from metrics import q1q5		
 
-						Coder pour faire des choses avec de vraies données, en utilisant la statistique.
-					</section>
-					<section data-markdown  style =  "text-align: left;font-size: 75%">
-						#### Detection d'erreurs probables de bulletins:   
-						- Non-supervisé --> repérer les cas atypiques susceptibles de créer des effets de bord via des techniques de [détection d'anomalies](https://fr.wikipedia.org/wiki/D%C3%A9tection_d%27anomalies)   
+						id_diff_children = select_individuals(methodology=2,
+							reference_year=2011, target_year=2015,
+							left_household=False, age_min_max=(20,25))
+						df_result = q1q5(df_result.Y_children, df_result.Y_pere,
+							group= df_result["Zone d'emploi"],
+							within=True, 
+							by_group=True,
+							min_obs_to_drop=10)											
+						</code></pre>
 
-						- Supervisé --> en créant un ensemble d'entrainement en créant une base de données contenant toutes les anomalies détectées.
+				</section>
+				<section>
+				<h4>Pratiques 2:</h4>
+						<pre  data-id="code-animation"><code class="Python; stretch"  data-trim data-line-numbers>
+						print(df_result)						
+						</code></pre>
+					<table class="fragment">
+						<thead>
+							<tr>
+								<th>Zone d'emploi</th>
+								<th>Q1Q5</th>
+								<th>N_obs</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>50</td>
+								<td>0.13</td>
+								<td>141</td>
+							</tr>
+							<tr>
+								<td>51</td>
+								<td>0.17</td>
+								<td>139</td>
+							</tr>
+							<tr>
+								<td>53</td>
+								<td>0.12</td>
+								<td>157</td>
+							</tr>
+						</tbody>
+					</table>
 
+				</section>
+				<section>
+					<h3>Open Science</h3>
+					<ul>
+						<li class="fragment">Devoir citoyen du chercheur</li>
+						<li class="fragment">Gain en productivité</li>
+					</ul>
+					<p class="fragment" style = "text-align: left;">Participation au projet <a href="www.cascad.tech">Cascad</a>, premier article certifié reproductible sur données administratives/confidentielles.</p>
+				</section>
+			</section>
+			<section>
+					<section data-markdown  style =  "text-align: center;font-size: 75%">
+						### Motivations:
+						- Contribuer au site des utilisateurs de l'EDP
+						- Publier recherche en cours
+						- Investiguer/expliquer les causes de la diminution de la fécondité en France
 					</section>
-					<section data-markdown  style =  "text-align: left;font-size: 75%">
-					### Gestion des talents:  
+				</section>
+				<section>
+						Recherche
+				</section>
 
-					Pour garder un talent, vaut-il mieux:  
-					- L'augmenter ? 
-					- Lui offrir plus de vacances ? 
-					- Payer des journées team-building/augmenter son bien être au travail ? 
-					</section>
-					<section data-markdown  style =  "text-align: left;font-size: 75%">
-					### Veille légale semi-automatisée:
-					- Lier automatiquement un paramètre du progiciel de paye en utilisant l'historique de la loi (matching texte/paramètre).
-					- Essayer de prédire la variation des paramètres en fonction d'autres indicateurs (chômage, PIB, couleur politique, etc.), et potentiellement permettre aux clients d'avoir une estimation des futures variations de la masse salariale.
-					</section>
-					<section data-markdown  style =  "text-align: left;font-size: 75%">
-					### Formation professionnelle:
-					- Proposer automatiquement des formations professionnelles à des employés basés sur des prédictions automatiques issues d'une modèle de machine learning.
-					>  Domoscio connecte les sciences cognitives, le Big Data et l'IA pour créer des solutions d’adaptive learning. Il optimise l’assimilation et la consolidation pour améliorer les impacts de l'apprentissage.
-					</section>
 
 				</section>
 
