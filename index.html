@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Presentation INED</title>
+		<title>Présentation INED</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -20,7 +20,7 @@
 			<div class="slides" >
 
 				<section data-background="#cddcdd" >
-					<h3 align="Center">Presentation parcours et projet professionnel</h3>
+					<h3 align="Center"> Parcours et Motivations</h3>
 					<hr>
 					<p align="left"; ;size = "5">
 						<font size = 6> <a href="http://adrienpacifico.github.io">Adrien Pacifico</a></font>
@@ -30,6 +30,9 @@
 					<p align="left">
 						<font color = "#dsfdff";size = "7">6 octobre 2020<br>
 							INED</font>
+					</p>
+					<p align="left"; ;size = "5">
+						Slides:<font size = 6> <a href="https://adrienpacifico.github.io/INED_Presentation/"> https://adrienpacifico.github.io/INED_Presentation</a></font>
 					</p>
 				</section>
 
@@ -51,7 +54,7 @@
 					<section data-markdown  style =  "text-align: left;font-size: 75%">
 						## Parcours:  
 						- Magistère Ingénieur économiste
-						- Master Évalution des politiques publiques
+						- Master Évaluation des politiques publiques
 						- Thèse en économie publique
 						- Stage chez ETALAB
 						- Enseignant
@@ -1269,7 +1272,7 @@
 						</section>
 					</section>
 					<section data-markdown  style =  "text-align: left;font-size: 75%">
-						## L'optimisation des couples de concubins avec enfant(s):  
+						### L'optimisation des couples de concubins avec enfant(s):  
 						- Un couple de concubin constitue deux foyers fiscaux.
 						- Ils peuvent allouer chaque enfant (naturel) sur un des deux foyers fiscaux
 						- Il existe une allocation optimale qui permet de minimiser l'impôt
@@ -1291,6 +1294,30 @@
 						<iframe class="stretch" src="./docs/bokeh_graph.html">
                   		</iframe>
 					</section>
+		<section data-markdown  style = "text-align: left;font-size:70%;data-separator-notes="^Note:">
+		## Intergenerational Mobility Measures
+		IGE: 
+		$$IGE = Corr(log \; y_i , log \; y_i^p) \frac{SD(log \; y_i)}{SD(log \; y_i^p)}$$
+		Rank-Rank Slope: 
+			 	$$R_i = \alpha + \beta R_i^p + \epsilon_i$$  
+		Absolute Upward Mobility: $$\mathbb{E}[R_i | R_i^p < 50] $$  
+		Q1-Q5 (American Dream): $$\mathbb{E}[Q = 5 |Q^p = 1] $$   
+		_____________________________
+		* $y_i$ is child's income; $y_i^p$ parents' income
+		* $R_i$ child's percentile rank;  $R_i$ parents' rank
+		* $Q$ child's quintile rank;  $Q_i$ parents' rank
+
+		Note: 
+			IGE : intergenerational income elasticity  
+				*  Captures the elasticity of child income with respect to parental income
+				* An IGE of 0.5, for example, means that a 20 pct differ- ential in parental income translates into a 10 pct differential in child income.  
+			Rank-Rank Slope :  
+
+			 	* a$\alpha$ measures the expected rank of botom of the distribution children  
+				* $\beta$ correlation strenght between children and parents income.
+
+
+		</section>
 					<section>
 						Mobilité sociale en France
 						<iframe class="stretch" src="./docs/plotly_express_mobility.html">
@@ -1414,10 +1441,20 @@
 					</section>
 				</section>
 				<section>
+					<section>
 						Recherche
+					</section>
 				</section>
+				<section>
+				<section data-markdown  style =  "text-align: left;font-size: 75%">
+						- Investiguer la baisse de fécondité en France depuis 2009
+						- Triple différérences pour les ménages touchés par la double réforme AF/QF
+						- Décision de fécondité en fonction de la stabilité économique d'un ménage
+						- Utilisation de données massives pour évaluer l'impact de la fourniture de services publics liés à l'enfance
+					</section>
+					<section><iframe class="stretch" data-src="https://nbviewer.jupyter.org/github/adrienpacifico/fertility_open_data/blob/master/notebook(s)/Fertility_2018.ipynb" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe></section>
 
-
+				</section>
 				</section>
 
 
@@ -1425,15 +1462,23 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				math: {
+      mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      // pass other options into `MathJax.Hub.Config()`
+      TeX: { Macros: { RR: "{\\bf R}" } }
+    },
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
 			});
 			Reveal.configure({ slideNumber: 'c/t' });
 		</script>
